@@ -1,9 +1,389 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cloned repo demonstration</title>
+    <title>nav bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <!--	    download free themes from bootswatch.com-->
+    <style>
+      .thumb {
+        padding: 60px 10px;
+        text-align: center;
+        background: #fff;
+      }
+      .thumb:nth-child(even) {
+        background: #fff;
+      }
+      h1,
+      h2 {
+        margin: 30px 0;
+      }
+      .thumb:nth-child(odd) {
+        clear: both;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <!--	<nav class="navbar navbar-default navbar-fixed-bottom">-->
+      <!--		it is outside the container as we want the heading to be in same vertical line as of navbar text which is written down-->
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/index.html" class="navbar-brand">AWESOME TRAINING</a>
+          <button
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#mydropdown"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="mydropdown">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Ninja Training</a></li>
+            <li class="active"><a href="#">Wizard Training</a></li>
+            <li><a href="#">Psychic Training</a></li>
+            <li><a href="#">Coding Training</a></li>
+          </ul>
+          <!--
+			<button class="btn btn-default navbar-btn navbar-right" style="margin-left: 10px;">Register</button>
+			<button class="btn btn-default navbar-btn navbar-right">Login</button>
+-->
+          <button
+            class="btn btn-default navbar-btn navbar-right"
+            style="margin-left: 10px;"
+          >
+            Inbox <span class="label label-danger">NEW</span>
+          </button>
+          <button class="btn btn-default navbar-btn navbar-right">
+            Notifications
+            <span class="badge" style="background: #d9534f;">20</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!--	<div class="container" style="padding-top: 60px; padding-bottom: 60px;">-->
+    <!--	<div class="container" style="padding-bottom: 60px;">-->
+    <!--		<ul class="nav nav-tabs">-->
+    <!--		<ul class="nav nav-pills nav-justified">-->
+    <!--			nav-justified is used to make li tags in same width-->
+    <!--		<div class="row">-->
+    <!--			<div class="col-xs-12">-->
+    <!--				jumbotron makes the para stand out ie largens it and gives it grey background color-->
+    <!--
+				<div class="jumbotron">
+				<h1>Navbars</h1>
+				<p>fugiat litteris sempiternum vidisse id vidisse admodum quae despicationes iis 
+					domesticarum ipsum ne voluptate laboris anim praetermissum sunt id deserunt 
+					possumus tamen laborum cupidatat consectetur anim domesticarum mandaremus 
+					philosophari incurreret an quem est quamquam hic do familiaritatem ab fore ubi</p>
+				</div>
+-->
+    <div class="carousel slide" id="myslider" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myslider" data-slide-to="0" class="active"></li>
+        <li data-target="#myslider" data-slide-to="1"></li>
+        <li data-target="#myslider" data-slide-to="2"></li>
+        <!--			here #myslider coz we are referring to an id i.e. myslider-->
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/imgx1.jpg" />
+          <div class="carousel-caption">
+            <h2>hi! i am suyash paradkar</h2>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/imgx2.jpg" />
+          <div class="carousel-caption">
+            <h2>hi! i am suyash paradkar</h2>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/imgx3.jpg" />
+          <div class="carousel-caption">
+            <h2>hi! i am suyash paradkar</h2>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myslider" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#myslider" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+    <div class="container" style="padding-top: 60px;">
+      <div class="panel-group" id="myaccordian">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3
+              class="panel-title"
+              data-target="#panel-1"
+              data-toggle="collapse"
+              data-parent="#myaccordian"
+            >
+              Ninja training
+            </h3>
+            <!--								here data-parent is used to avoid opening of several accordians simultaneously i.e. only 1 at a time-->
+          </div>
+          <div class="panel-collapse collapse" id="panel-1">
+            <div class="panel-body">
+              <p>
+                praetermissum eiusmod magna enim o offendit quis proident
+                familiaritatem familiaritatem do si expetendis labore voluptate
+                praetermissum in dolor comprehenderit a hic de cupidatat hic
+                ingeniis ut illustriora labore malis appellat quid iudicem
+                incurreret sed mandaremus occaecat elit et duis dolore
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3
+              class="panel-title"
+              data-target="#panel-2"
+              data-toggle="collapse"
+              data-parent="#myaccordian"
+            >
+              Wizard training
+            </h3>
+          </div>
+          <div class="panel-collapse collapse" id="panel-2">
+            <div class="panel-body">
+              <p>
+                praetermissum eiusmod magna enim o offendit quis proident
+                familiaritatem familiaritatem do si expetendis labore voluptate
+                praetermissum in dolor comprehenderit a hic de cupidatat hic
+                ingeniis ut illustriora labore malis appellat quid iudicem
+                incurreret sed mandaremus occaecat elit et duis dolore
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3
+              class="panel-title"
+              data-target="#panel-3"
+              data-toggle="collapse"
+              data-parent="#myaccordian"
+            >
+              Coding training
+            </h3>
+          </div>
+          <div class="panel-collapse collapse" id="panel-3">
+            <div class="panel-body">
+              <p>
+                praetermissum eiusmod magna enim o offendit quis proident
+                familiaritatem familiaritatem do si expetendis labore voluptate
+                praetermissum in dolor comprehenderit a hic de cupidatat hic
+                ingeniis ut illustriora labore malis appellat quid iudicem
+                incurreret sed mandaremus occaecat elit et duis dolore
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">how to be a badass ninja</h2>
+              <!--									modal-title is used to shorten the title-->
+              <button class="close" type="button" data-dismiss="modal">
+                x
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>
+                appellat arbitror excepteur admodum eu consectetur arbitror eram
+                adipisicing id
+              </p>
+              <p>
+                appellat arbitror excepteur admodum eu consectetur arbitror eram
+                adipisicing id
+              </p>
+              <p>
+                appellat arbitror excepteur admodum eu consectetur arbitror eram
+                adipisicing id
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-3">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h1 class="panel-title">Ninja</h1>
+            </div>
+            <div class="panel-body">
+              <p>
+                litteris offendit cernantur ingeniis arbitrantur aliqua ne
+                varias singulis anim cillum ipsum commodo familiaritatem
+                expetendis fabulas aut si fore offendit
+              </p>
+            </div>
+            <div class="panel-footer">
+              <!--									<a href="#" data-toggle="tooltip" data-placement="top" title="How to be a kick ass ninja like me!">More info...</a>-->
+              <a href="#" data-toggle="modal" data-target="#mymodal"
+                >More info...</a
+              >
+              <!--								here data-toggle is used to give information when hovered over it-->
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h1 class="panel-title">Ninja</h1>
+            </div>
+            <div class="panel-body">
+              <p>
+                litteris offendit cernantur ingeniis arbitrantur aliqua ne
+                varias singulis anim cillum ipsum commodo familiaritatem
+                expetendis fabulas aut si fore offendit
+              </p>
+            </div>
+            <div class="panel-footer">
+              <a href="#">More info...</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h1 class="panel-title">Ninja</h1>
+            </div>
+            <div class="panel-body">
+              <p>
+                litteris offendit cernantur ingeniis arbitrantur aliqua ne
+                varias singulis anim cillum ipsum commodo familiaritatem
+                expetendis fabulas aut si fore offendit
+              </p>
+            </div>
+            <div class="panel-footer">
+              <a href="#">More info...</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h1 class="panel-title">Ninja</h1>
+            </div>
+            <div class="panel-body">
+              <p>
+                litteris offendit cernantur ingeniis arbitrantur aliqua ne
+                varias singulis anim cillum ipsum commodo familiaritatem
+                expetendis fabulas aut si fore offendit
+              </p>
+            </div>
+            <div class="panel-footer">
+              <a href="#">More info...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--				a form elements-->
+    <div class="col-xs-6">
+      <form>
+        <div class="form-group">
+          <label for="name" class="sr-only">Name</label>
+          <input
+            class="form-control"
+            type="text"
+            id="name"
+            placeholder="Name"
+          />
+        </div>
+        <!--						
+here sr-only to remove the name heading on top of name box
+here form group spacens the 2 labels and also increase readiability-->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            class="form-control"
+            type="email"
+            id="email"
+            placeholder="Email"
+          />
+        </div>
+        <div class="form-group">
+          <label class="checkbox-inline">
+            <input type="checkbox" />
+            Ninja Training
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" />
+            Wizard Training
+          </label>
+        </div>
+        <!--
+						here form-group makes content inside it on new line
+						checkbox-inline and radio-inline makes the label better looking
+						giving same name in input type radio to avoid the clicking of both male and female fields
+-->
+        <div class="form-group">
+          <label class="radio-inline">
+            <input type="radio" name="gender" />
+            Male
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="gender" />
+            Female
+          </label>
+        </div>
+        <input type="submit" value="send" class="btn btn-primary" />
+      </form>
+    </div>
+    <!--
+			</div>
+		</div>
+	</div>
+-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //	$(function()
+      //	 {
+      //		$('[data-toggle="tooltip"]').tooltip();
+      //	 });
+      $(function () {
+        $(".carousel").carousel({
+          interval: 1000,
+          pause: false,
+          wrap: false,
+          keyboard: true,
+        });
+      });
+      //	here pause means it pauses the transition when we put mouse over it
+      //	wrap means it won't move to first image when last image is reached
+      //	keyboard is used to use sliding of images using keyboard
+    </script>
+  </body>
 </html>
